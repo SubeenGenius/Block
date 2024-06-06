@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Clock - Blocked by Pranshu</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Audio element for background music -->
+    <audio id="bgm" loop autoplay>
+        <source src="/Users/subeenbohara/Downloads/Fight Back.mp3" type="audio/mpeg">
+        <source src="/Users/subeenbohara/Downloads/Grateful.mp3" type="audio/mpeg">
+        <source src="/Users/subeenbohara/Downloads/Rumors.mp3" type="audio/mpeg">
+
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="clock-container">
+        <h1>Elapsed Time since Blocked by Pranshu on May 30, 11:34 PM</h1>
+        <div id="elapsed-time" class="time-display"></div>
+        <div class="button-container">
+            <button id="stop-button">Stop</button>
+            <button id="resume-button" disabled>Resume</button>
+        </div>
+        <div class="pendulum-experiment">
+            <div class="pendulum-support"></div>
+            <div class="pendulum">
+                <div class="pendulum-rod"></div>
+                <div class="pendulum-weight"></div>
+            </div>
+        </div>
+        <div class="equation-container">
+            <div class="equation">E = mc²</div>
+            <div class="equation">F = ma</div>
+            <div class="equation">H₂O</div>
+            <div class="equation">a² + b² = c²</div>
+            <div class="equation">PV = nRT</div>
+            <div class="equation">λ = h/p</div>
+            <div class="equation">g = 9.8 m/s²</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

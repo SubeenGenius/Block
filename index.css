@@ -1,0 +1,160 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+}
+
+.clock-container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.equation-container {
+    margin-top: 20px;
+}
+
+.equation {
+    font-size: 1.2em;
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.time-display {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#stop-button {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+#resume-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.pendulum-experiment {
+    position: relative;
+    width: 60px;
+    height: 180px;
+    margin: 20px auto 0;
+}
+
+.pendulum-support {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 12px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.pendulum {
+    position: absolute;
+    top: 12px;
+    width: 6px;
+    height: 120px;
+    background-color: transparent;
+    animation: swing 2s infinite ease-in-out;
+    transform-origin: top center;
+}
+
+.pendulum-rod {
+    width: 2px;
+    height: 110px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.pendulum-weight {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top: 110px;
+    left: -7px;
+}
+
+@keyframes swing {
+    0% { transform: rotate(-30deg); }
+    50% { transform: rotate(30deg); }
+    100% { transform: rotate(-30deg); }
+}
+
+/* Responsive Design */
+
+@media (min-width: 768px) {
+    .clock-container {
+        padding: 40px;
+    }
+
+    .equation {
+        font-size: 1.5em;
+    }
+
+    .time-display {
+        font-size: 3em;
+    }
+
+    .pendulum-experiment {
+        width: 100px;
+        height: 300px;
+    }
+
+    .pendulum-support {
+        width: 10px;
+        height: 20px;
+    }
+
+    .pendulum {
+        top: 20px;
+        width: 10px;
+        height: 200px;
+    }
+
+    .pendulum-rod {
+        height: 180px;
+    }
+
+    .pendulum-weight {
+        width: 40px;
+        height: 40px;
+        top: 180px;
+        left: -15px;
+    }
+}
